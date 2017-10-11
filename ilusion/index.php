@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -23,26 +18,4 @@ and open the template in the editor.
 
     <body>
         <?php
-        if (isset($_POST['Calcular'])){
-            
-       $codigo_pedido =$_POST['codigo_pedido'];
-       $id_clienta =$_POST['id_clienta'];
-       $monto =$_POST['monto'];
-      
-       $con=@mysql_connect("localhost","root","","ilusion");
-    if (mysqli_connect_errno($con))
-        {
-        echo "failed to connect to MYSQL: " . mysqli_connect_error();
-        }
-        $sql = "INSERT INTO pedidos (codpedido,nombreclienta,monto) VALUES('$codigo_pedido','$id_clienta','$monto')";
-             echo "'<br>'<h2> ha sido registrado el abono: $codigo_pedido <br> <br> en el numero de clienta: $id_clienta </h2>'<br>'";
-        if (!mysqli_query($con,$sql))
-         {
-         die ('Error: ' . mysqli_error($con));
-         }
-        echo "<h2>gracias por su abono </h2>";
-            mysqli_close($con);
-        }
-         ?>
-    </body>
-</html>
+        
